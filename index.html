@@ -222,19 +222,19 @@
                             <p class="text-slate text-sm">השאירי פרטים למעבר לרכישה מאובטחת באתר</p>
                         </div>
                         
-                        <form id="heroForm" class="space-y-5">
+                        <form id="heroForm" class="space-y-5" novalidate>
                             <div>
                                 <label class="block text-sm font-medium text-slate mb-1">שם מלא</label>
-                                <input type="text" name="fullName" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" placeholder="הקלידי כאן...">
+                                <input type="text" name="fullName" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-slate mb-1">טלפון נייד</label>
-                                <input type="tel" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" placeholder="050-0000000">
+                                <input type="tel" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
                             </div>
                             
-                            <!-- כפתור מעודכן עם טקסט חדש -->
+                            <!-- כפתור מעודכן עם פרופורציות טובות יותר -->
                             <button type="submit" class="btn-gold w-full py-4 px-6 text-lg font-bold shadow-gold mt-4 group">
-                                <span class="relative z-10">לפרטים נוספים ומעבר להזמנה</span>
+                                <span class="relative z-10">לקבלת ייעוץ ובחירת חבילה</span>
                             </button>
                             
                             <p class="text-xs text-center text-slate/60 mt-4 flex justify-center items-center gap-1">
@@ -329,7 +329,7 @@
                     <!-- רכיב 1 -->
                     <div class="bg-white/10 backdrop-blur border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition group text-center">
                         <i data-lucide="shield-check" class="w-12 h-12 text-goldMid mb-4 mx-auto group-hover:scale-110 transition-transform"></i>
-                        <h4 class="font-bold text-xl mb-2 text-white">גדילן מצוי & שישנדרה</h4>
+                        <h4 class="font-bold text-xl mb-2 text-white">גדילן מצוי & שחיזנדרה</h4>
                         <p class="text-sm text-gray-300 font-light">להגנה ושיקום תאי הכבד.</p>
                     </div>
                     <!-- רכיב 2 -->
@@ -602,14 +602,14 @@
             <!-- Bottom Form -->
             <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-lg mx-auto">
                 <h3 class="text-2xl font-bold text-primary mb-6">מלאי פרטים למעבר לרכישה</h3>
-                <form id="bottomForm" class="space-y-5 text-right">
+                <form id="bottomForm" class="space-y-5 text-right" novalidate>
                     <div>
                         <label class="block text-sm font-medium text-slate mb-1">שם מלא</label>
-                        <input type="text" name="fullName" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" placeholder="הקלידי כאן...">
+                        <input type="text" name="fullName" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate mb-1">טלפון נייד</label>
-                        <input type="tel" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" placeholder="050-0000000">
+                        <input type="tel" name="phone" required class="form-input w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
                     </div>
                     
                     <!-- כפתור מעודכן עם טקסט חדש -->
@@ -627,12 +627,7 @@
     <!-- Footer -->
     <footer class="bg-white text-slate py-12 text-center text-sm border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="mb-8">
-                <span class="text-2xl font-black text-primary tracking-widest">THE123</span>
-            </div>
-            
-            <p class="mb-4 text-slate/60">מולטי דיטוקס 123 © כל הזכויות שמורות 2024</p>
-            <p class="text-xs text-slate/40 max-w-lg mx-auto leading-relaxed border-t border-gray-100 pt-6 mt-6">
+            <p class="text-xs text-slate/40 max-w-lg mx-auto leading-relaxed">
                 <strong>הצהרת בריאות:</strong> המידע באתר אינו מהווה התוויה רפואית. בכל מקרה של בעיה רפואית יש להיוועץ ברופא המטפל. נשים בהריון, מניקות, אנשים הנוטלים תרופות מרשם וילדים - יש להיוועץ ברופא.
             </p>
         </div>
@@ -678,16 +673,40 @@
             e.preventDefault();
             const form = e.target;
             const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Getting Inputs for Validation
+            const nameInput = form.querySelector('input[name="fullName"]');
+            const phoneInput = form.querySelector('input[name="phone"]');
+            
+            // Reset validity messages
+            nameInput.setCustomValidity('');
+            phoneInput.setCustomValidity('');
+
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+
+            // Name Validation: At least 2 characters
+            if (name.length < 2) {
+                nameInput.setCustomValidity('נא להזין שם המכיל לפחות 2 תווים');
+                nameInput.reportValidity();
+                return;
+            }
+
+            // Phone Validation: Starts with 05 and has exactly 10 digits
+            const phoneRegex = /^05\d{8}$/;
+            if (!phoneRegex.test(phone)) {
+                phoneInput.setCustomValidity('מספר הטלפון חייב להתחיל ב-05 ולהכיל 10 ספרות בדיוק');
+                phoneInput.reportValidity();
+                return;
+            }
+
             const originalBtnText = submitBtn.innerHTML;
             
             // Show loading state
             submitBtn.innerHTML = '<span>שולח...</span>';
             submitBtn.disabled = true;
 
-            const formData = new FormData(form);
-            const name = formData.get('fullName');
-            const phone = formData.get('phone');
-            // חבילה דיפולטיבית כי אין בחירה
+            // Default package for forms without selector
             const pkg = 'טופס כללי (אין בחירת חבילה)';
 
             sendToWebhook(name, phone, pkg).then(() => {

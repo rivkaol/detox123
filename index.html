@@ -45,7 +45,7 @@
                         earthPinkLight: '#FDF8F5', // רקע ורדרד
                         pearlCream: '#F9FAFB',   // רקע כללי
                         charcoal: '#333333',     // טקסט ראשי
-                        slate: '#4A5568',        // טקסט משני - הוקהה לקריאות טובה יותר
+                        slate: '#2D3748',        // טקסט משני - הוקהה לקריאות מקסימלית
                     },
                     fontFamily: {
                         rubik: ['Rubik', 'sans-serif'],
@@ -59,16 +59,16 @@
                         'gold-gradient': 'linear-gradient(180deg, #FCE38A 0%, #D4AF37 50%, #997B09 100%)',
                     },
                     fontSize: {
-                        'xs': ['0.875rem', { lineHeight: '1.25rem' }], 
-                        'sm': ['1rem', { lineHeight: '1.5rem' }],      
-                        'base': ['1.125rem', { lineHeight: '1.75rem' }], 
-                        'lg': ['1.25rem', { lineHeight: '1.85rem' }],    
-                        'xl': ['1.5rem', { lineHeight: '2.1rem' }],        
-                        '2xl': ['1.875rem', { lineHeight: '2.35rem' }],  
-                        '3xl': ['2.25rem', { lineHeight: '2.6rem' }],    
-                        '4xl': ['3rem', { lineHeight: '1.1' }],             
-                        '5xl': ['3.75rem', { lineHeight: '1.1' }],          
-                        '6xl': ['4.5rem', { lineHeight: '1.1' }],           
+                        'xs': ['1rem', { lineHeight: '1.5rem' }],        // מינימום 16px
+                        'sm': ['1.125rem', { lineHeight: '1.75rem' }],   // 18px
+                        'base': ['1.25rem', { lineHeight: '1.85rem' }],  // 20px
+                        'lg': ['1.35rem', { lineHeight: '2rem' }],       // ~22px
+                        'xl': ['1.5rem', { lineHeight: '2.25rem' }],     // 24px
+                        '2xl': ['1.875rem', { lineHeight: '2.5rem' }],   // 30px
+                        '3xl': ['2.25rem', { lineHeight: '2.75rem' }],   // 36px
+                        '4xl': ['3rem', { lineHeight: '1.1' }],
+                        '5xl': ['3.75rem', { lineHeight: '1.1' }],
+                        '6xl': ['4.5rem', { lineHeight: '1.1' }],
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
@@ -89,7 +89,7 @@
             font-family: 'Rubik', sans-serif; 
             background-color: #F9FAFB;
             color: #333333;
-            font-size: 18px; 
+            font-size: 20px; /* ברירת מחדל גדולה מאוד */
             overflow-x: hidden;
         }
         
@@ -180,7 +180,7 @@
 
         .form-input {
             transition: all 0.3s ease;
-            font-size: 1.125rem; 
+            font-size: 1.25rem; /* טקסט גדול בשדות */
         }
         .form-input:focus {
             border-color: #D4AF37;
@@ -191,39 +191,32 @@
 <body class="antialiased selection:bg-goldMid selection:text-white">
 
     <!-- Top Bar -->
-    <div class="bg-primary text-white text-center py-3 px-4 text-base font-medium tracking-wide flex justify-center items-center gap-2">
-        <i data-lucide="sparkles" class="w-5 h-5 text-goldStart flex-shrink-0"></i>
+    <div class="bg-primary text-white text-center py-3 px-4 text-lg font-medium tracking-wide flex justify-center items-center gap-2">
         <span>100% טבעי | משלוח מהיר עד 5 ימי עסקים</span>
     </div>
 
     <!-- Hero Section -->
     <header class="relative pt-12 pb-16 px-4 md:px-8 overflow-hidden">
-        <!-- Background Overlay -->
         <div class="absolute inset-0 hero-bg opacity-[0.03] pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
             
-            <!-- תגית עליונה -->
-            <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-primary/10 text-primary font-semibold text-base mb-6 shadow-sm" data-aos="fade-down">
-                <i data-lucide="leaf" class="w-5 h-5 text-goldMid flex-shrink-0"></i>
+            <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-primary/10 text-primary font-semibold text-lg mb-6 shadow-sm" data-aos="fade-down">
+                <i data-lucide="leaf" class="w-6 h-6 text-goldMid flex-shrink-0"></i>
                 הפתרון הטבעי שחיכית לו
             </div>
 
-            <!-- כותרת ראשית -->
             <h1 class="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight text-center max-w-3xl mx-auto" data-aos="fade-up">
                 מרגישה עייפה, נפוחה ו"תקועה"?
                 <span class="block text-2xl md:text-4xl font-normal text-earthPink mt-4 leading-normal">הגוף שלך זועק <span class="highlight-text font-medium">לניקוי פנימי.</span></span>
             </h1>
 
-            <!-- טקסט פתיחה -->
-            <p class="text-xl md:text-2xl text-slate mb-10 max-w-2xl text-center leading-relaxed font-light px-2" data-aos="fade-up" data-aos-delay="100">
-                הכירי את <strong>מולטי דיטוקס 123</strong> – הדרך הטבעית והבטוחה לנקות את הכבד, להשיב את האנרגיה ולהרגיש קלילה שוב.
+            <p class="text-xl md:text-2xl text-slate mb-10 max-w-2xl text-center leading-relaxed font-normal px-2" data-aos="fade-up" data-aos-delay="100">
+                הכירי את <strong>מולטי דיטוקס 123</strong> הדרך הטבעית והבטוחה לנקות את הכבד, להשיב את האנרגיה ולהרגיש קלילה שוב.
             </p>
 
-            <!-- מבנה אנכי: תמונה ואחריה טופס -->
             <div class="flex flex-col items-center w-full gap-10">
                 
-                <!-- תמונה ראשית -->
                 <div class="relative group w-full max-w-3xl px-2" data-aos="zoom-in" data-aos-delay="200">
                     <div class="absolute -inset-1 bg-gradient-to-r from-goldStart to-primary opacity-20 blur-xl rounded-[40px] transition duration-1000 group-hover:opacity-40"></div>
                     <div class="relative p-2 bg-white/60 backdrop-blur-sm rounded-[32px] border border-white">
@@ -232,7 +225,6 @@
                                  alt="אישה מחייכת ומרגישה קלילה" 
                                  class="w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
                             
-                            <!-- Badge - מוסתר במובייל כדי לא להסתיר -->
                             <div class="absolute bottom-6 right-6 glass-card px-6 py-4 flex items-center gap-4 animate-float hidden md:flex">
                                 <div class="bg-primary p-3 rounded-full text-white shadow-lg">
                                     <i data-lucide="shield-check" class="w-6 h-6"></i>
@@ -246,32 +238,31 @@
                     </div>
                 </div>
 
-                <!-- טופס Hero (ממוקם מתחת לתמונה) -->
                 <div class="w-full max-w-xl px-2" data-aos="fade-up" data-aos-delay="300">
                     <div class="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-goldStart/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                         
                         <div class="text-center mb-8">
                             <h3 class="text-2xl md:text-3xl font-bold text-primary mb-3">רוצה להתחיל בשינוי?</h3>
-                            <p class="text-slate text-base">השאירי פרטים למעבר לרכישה מאובטחת באתר</p>
+                            <p class="text-slate text-lg">השאירי פרטים למעבר לרכישה מאובטחת באתר</p>
                         </div>
                         
                         <form id="heroForm" class="space-y-6" novalidate>
                             <div>
-                                <label class="block text-lg font-medium text-slate mb-2">שם מלא</label>
+                                <label class="block text-xl font-medium text-slate mb-2">שם מלא</label>
                                 <input type="text" name="fullName" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none">
                             </div>
                             <div>
-                                <label class="block text-lg font-medium text-slate mb-2">טלפון נייד</label>
+                                <label class="block text-xl font-medium text-slate mb-2">טלפון נייד</label>
                                 <input type="tel" name="phone" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
                             </div>
                             
-                            <button type="submit" class="btn-gold w-full py-5 px-4 text-xl font-bold shadow-gold mt-4 group whitespace-normal h-auto min-h-[60px]">
+                            <button type="submit" class="btn-gold w-full py-5 px-4 text-xl font-bold shadow-gold mt-4 group whitespace-normal h-auto min-h-[70px]">
                                 <span class="relative z-10 text-center leading-tight">לפרטים נוספים ומעבר להזמנה</span>
                             </button>
                             
-                            <p class="text-sm text-center text-slate/80 mt-4 flex justify-center items-center gap-2">
-                                <i data-lucide="lock" class="w-4 h-4 flex-shrink-0"></i> פרטייך מאובטחים ושמורים אצלנו
+                            <p class="text-base text-center text-slate/80 mt-4 flex justify-center items-center gap-2">
+                                <i data-lucide="lock" class="w-5 h-5 flex-shrink-0"></i> פרטייך מאובטחים ושמורים אצלנו
                             </p>
                         </form>
                     </div>
@@ -286,9 +277,9 @@
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">למה את מרגישה ככה?</h2>
-                <p class="text-xl text-slate max-w-3xl mx-auto font-light leading-relaxed px-2">
+                <p class="text-xl md:text-2xl text-slate max-w-3xl mx-auto font-normal leading-relaxed px-2">
                     הגוף שלנו חשוף מדי יום למאות רעלים: זיהום אוויר, מזון מעובד, תרופות, עישון ולחץ יומיומי.
-                    <br class="hidden md:block"><strong class="text-earthPink font-medium">הכבד שלך? הוא עובד שעות נוספות.</strong> כשהוא עמוס, את מרגישה:
+                    <br class="hidden md:block"><strong class="text-earthPink font-bold">הכבד שלך? הוא עובד שעות נוספות.</strong> כשהוא עמוס, את מרגישה:
                 </p>
             </div>
 
@@ -299,7 +290,7 @@
                         <i data-lucide="battery-warning" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-primary mb-3">עייפות כרונית</h3>
-                    <p class="text-slate text-lg leading-relaxed">חוסר אנרגיה ותחושת כבדות שלא עוברת גם אחרי מנוחה.</p>
+                    <p class="text-slate text-xl leading-relaxed">חוסר אנרגיה ותחושת כבדות שלא עוברת גם אחרי מנוחה.</p>
                 </div>
                 <!-- בעיה 2 -->
                 <div class="glass-card p-8 text-center group hover:border-earthPink/30 transition-colors">
@@ -307,7 +298,7 @@
                         <i data-lucide="wind" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-primary mb-3">נפיחות בבטן</h3>
-                    <p class="text-slate text-lg leading-relaxed">תחושת "בלון" וכבדות לא נעימה, בעיקר אחרי האוכל.</p>
+                    <p class="text-slate text-xl leading-relaxed">תחושת "בלון" וכבדות לא נעימה, בעיקר אחרי האוכל.</p>
                 </div>
                 <!-- בעיה 3 -->
                 <div class="glass-card p-8 text-center group hover:border-earthPink/30 transition-colors">
@@ -315,7 +306,7 @@
                         <i data-lucide="scale" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-primary mb-3">קושי במשקל</h3>
-                    <p class="text-slate text-lg leading-relaxed">המשקל מרגיש "תקוע" גם כשאת מנסה לשמור על תזונה.</p>
+                    <p class="text-slate text-xl leading-relaxed">המשקל מרגיש "תקוע" גם כשאת מנסה לשמור על תזונה.</p>
                 </div>
                 <!-- בעיה 4 -->
                 <div class="glass-card p-8 text-center group hover:border-earthPink/30 transition-colors">
@@ -323,11 +314,10 @@
                         <i data-lucide="frown" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-primary mb-3">עור עמום</h3>
-                    <p class="text-slate text-lg leading-relaxed">מראה פנים עייף, חסר חיוניות ומצב רוח ירוד.</p>
+                    <p class="text-slate text-xl leading-relaxed">מראה פנים עייף, חסר חיוניות ומצב רוח ירוד.</p>
                 </div>
             </div>
             
-            <!-- עיצוב מודגש למשפט הסיום -->
             <div class="mt-8 md:mt-16 bg-earthPink/5 border border-earthPink/20 rounded-2xl p-8 md:p-10 text-center max-w-3xl mx-auto shadow-sm mx-4 md:mx-auto">
                 <div class="flex justify-center mb-6">
                     <div class="bg-white p-3 rounded-full shadow-sm">
@@ -335,58 +325,52 @@
                     </div>
                 </div>
                 <p class="text-3xl font-bold text-primary mb-3">את לא לבד.</p>
-                <p class="text-xl text-charcoal font-medium">אלפי נשים כבר עברו את השינוי הזה.</p>
+                <p class="text-2xl text-charcoal font-medium">אלפי נשים כבר עברו את השינוי הזה.</p>
             </div>
         </div>
     </section>
 
     <!-- Solution Section -->
     <section class="py-16 md:py-24 px-4 md:px-8 bg-primary relative overflow-hidden text-white">
-        <!-- עיטור רקע -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-goldMid/10 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4 pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">מולטי דיטוקס 123</h2>
-                <h3 class="text-2xl md:text-3xl font-light text-white/90 mb-6">הניקוי שהכבד שלך חיכה לו</h3>
-                <p class="text-gray-200 max-w-3xl mx-auto text-xl leading-relaxed font-light px-2">
+                <h3 class="text-2xl md:text-3xl font-normal text-white/90 mb-6">הניקוי שהכבד שלך חיכה לו</h3>
+                <p class="text-gray-200 max-w-3xl mx-auto text-xl leading-relaxed font-normal px-2">
                     נוסחה ייחודית המשלבת 7 צמחי מרפא עוצמתיים וטכנולוגיה מתקדמת.
                 </p>
             </div>
 
             <div class="flex flex-col gap-8">
-                <!-- Top Row: 3 Equal Items - משתנה לטור אחד במובייל -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    <!-- רכיב 1 -->
                     <div class="bg-white/10 backdrop-blur border border-white/20 p-8 rounded-2xl transition text-center">
                         <i data-lucide="shield-check" class="w-16 h-16 text-goldMid mb-6 mx-auto"></i>
                         <h4 class="font-bold text-2xl mb-3 text-white">גדילן מצוי & שכיזנדרה</h4>
-                        <p class="text-lg text-gray-200 font-light">להגנה ושיקום תאי הכבד.</p>
+                        <p class="text-xl text-gray-200 font-normal">להגנה ושיקום תאי הכבד.</p>
                     </div>
-                    <!-- רכיב 2 -->
                     <div class="bg-white/10 backdrop-blur border border-white/20 p-8 rounded-2xl transition text-center">
                         <i data-lucide="flower-2" class="w-16 h-16 text-goldMid mb-6 mx-auto"></i>
                         <h4 class="font-bold text-2xl mb-3 text-white">ארטישוק & שן הארי</h4>
-                        <p class="text-lg text-gray-200 font-light">לעידוד ניקוי רעלים ושיפור העיכול.</p>
+                        <p class="text-xl text-gray-200 font-normal">לעידוד ניקוי רעלים ושיפור העיכול.</p>
                     </div>
-                    <!-- רכיב 3 -->
                     <div class="bg-white/10 backdrop-blur border border-white/20 p-8 rounded-2xl transition text-center">
                         <i data-lucide="droplets" class="w-16 h-16 text-goldMid mb-6 mx-auto"></i>
                         <h4 class="font-bold text-2xl mb-3 text-white">רוזמרין ומגנזיום</h4>
-                        <p class="text-lg text-gray-200 font-light">לתמיכה אנזימטית והגנה נוגדת חמצון.</p>
+                        <p class="text-xl text-gray-200 font-normal">לתמיכה אנזימטית והגנה נוגדת חמצון.</p>
                     </div>
                 </div>
 
-                <!-- Bottom Row: Vitamin C -->
                 <div class="max-w-2xl mx-auto w-full">
                     <div class="bg-gradient-to-br from-goldStart to-goldEnd p-8 md:p-10 rounded-2xl shadow-lg border border-white/20 text-center">
                         <div class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                             <i data-lucide="zap" class="w-10 h-10 text-white"></i>
                         </div>
                         <h4 class="font-bold text-3xl mb-3 text-white">ויטמין C ליפוזומלי</h4>
-                        <span class="text-sm font-bold uppercase tracking-widest mb-4 block text-white/80">®Liposomalix pro</span>
-                        <p class="text-xl font-medium text-white">ספיגה פי 10 ישירות לתאים!</p>
+                        <span class="text-base font-bold uppercase tracking-widest mb-4 block text-white/80">®Liposomalix pro</span>
+                        <p class="text-2xl font-medium text-white">ספיגה פי 10 ישירות לתאים!</p>
                     </div>
                 </div>
             </div>
@@ -404,8 +388,8 @@
                         <i data-lucide="battery-charging" class="w-8 h-8"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-primary text-2xl mb-2">אנרגיה מחודשת</h4>
-                        <p class="text-slate font-light text-lg">לקום בבוקר רעננה באמת, ללא תחושת עייפות.</p>
+                        <h4 class="font-bold text-primary text-2xl mb-3">אנרגיה מחודשת</h4>
+                        <p class="text-slate font-normal text-xl leading-relaxed">לקום בבוקר רעננה באמת, ללא תחושת עייפות.</p>
                     </div>
                 </div>
                 <div class="glass-card p-6 md:p-8 flex items-start gap-6">
@@ -413,8 +397,8 @@
                         <i data-lucide="smile" class="w-8 h-8"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-primary text-2xl mb-2">בטן שטוחה וקלילה</h4>
-                        <p class="text-slate font-light text-lg">פחות נפיחות, יותר נוחות בבגדים.</p>
+                        <h4 class="font-bold text-primary text-2xl mb-3">בטן שטוחה וקלילה</h4>
+                        <p class="text-slate font-normal text-xl leading-relaxed">פחות נפיחות, יותר נוחות בבגדים.</p>
                     </div>
                 </div>
                 <div class="glass-card p-6 md:p-8 flex items-start gap-6">
@@ -422,8 +406,8 @@
                         <i data-lucide="flame" class="w-8 h-8"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-primary text-2xl mb-2">מטבוליזם יעיל</h4>
-                        <p class="text-slate font-light text-lg">תמיכה טבעית בתהליכי הרזיה וחילוף חומרים.</p>
+                        <h4 class="font-bold text-primary text-2xl mb-3">מטבוליזם יעיל</h4>
+                        <p class="text-slate font-normal text-xl leading-relaxed">תמיכה טבעית בתהליכי הרזיה וחילוף חומרים.</p>
                     </div>
                 </div>
                 <div class="glass-card p-6 md:p-8 flex items-start gap-6">
@@ -431,8 +415,8 @@
                         <i data-lucide="sparkles" class="w-8 h-8"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-primary text-2xl mb-2">מראה זוהר</h4>
-                        <p class="text-slate font-light text-lg">ניקוי פנימי שמשתקף בעור פנים חיוני.</p>
+                        <h4 class="font-bold text-primary text-2xl mb-3">מראה זוהר</h4>
+                        <p class="text-slate font-normal text-xl leading-relaxed">ניקוי פנימי שמשתקף בעור פנים חיוני.</p>
                     </div>
                 </div>
             </div>
@@ -444,7 +428,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">בחרי את האפשרות המתאימה לך</h2>
-                <div class="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-8 text-base text-slate font-medium">
+                <div class="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-8 text-xl text-slate font-medium">
                     <span class="flex items-center justify-center gap-2"><i data-lucide="truck" class="w-6 h-6 text-goldMid"></i> משלוח מהיר (5 ימי עסקים)</span>
                     <span class="flex items-center justify-center gap-2"><i data-lucide="credit-card" class="w-6 h-6 text-goldMid"></i> עד 8 תשלומים ללא ריבית</span>
                 </div>
@@ -455,65 +439,62 @@
                 
                 <!-- חבילה 1 -->
                 <div class="glass-card p-6 md:p-8 flex flex-col h-full relative group hover:shadow-lg transition-all duration-300">
-                    <h3 class="text-xl font-bold text-primary mb-2">סטנדרטית</h3>
-                    <p class="text-slate text-base mb-6 font-light">קופסה אחת</p>
+                    <h3 class="text-2xl font-bold text-primary mb-2">סטנדרטית</h3>
+                    <p class="text-slate text-lg mb-6 font-normal">קופסה אחת</p>
                     
                     <div class="mb-6">
-                        <span class="text-4xl font-bold text-charcoal">₪236</span>
-                        <div class="text-sm text-slate mt-1 font-medium">+ ₪24 דמי משלוח</div>
+                        <span class="text-5xl font-bold text-charcoal">₪236</span>
+                        <div class="text-lg text-slate mt-1 font-medium">+ ₪24 דמי משלוח</div>
                     </div>
                     
                     <div class="border-t border-gray-100 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-base text-slate">
-                            <i data-lucide="check" class="w-5 h-5 text-primary shrink-0"></i>
+                        <div class="flex items-start gap-3 text-xl text-slate">
+                            <i data-lucide="check" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>123 כמוסות</span>
                         </div>
-                        <div class="flex items-start gap-3 text-base text-slate">
-                            <i data-lucide="clock" class="w-5 h-5 text-primary shrink-0"></i>
+                        <div class="flex items-start gap-3 text-xl text-slate">
+                            <i data-lucide="clock" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>מספיק ל-4 חודשים (1 ביום)</span>
                         </div>
                     </div>
                     
-                    <!-- כפתור -->
-                    <button class="w-full py-4 px-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors flex justify-center items-center gap-2 group text-base h-auto min-h-[50px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
+                    <button class="w-full py-5 px-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors flex justify-center items-center gap-2 group text-xl h-auto min-h-[70px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
                         <span>אני רוצה לנסות את הדיטוקס</span>
                     </button>
                 </div>
 
                 <!-- חבילה 2 - מודגשת -->
                 <div class="bg-primary text-white rounded-3xl p-6 md:p-8 relative transform md:scale-105 shadow-gold flex flex-col h-full z-10 border border-primaryHover group transition-transform duration-300">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-goldStart to-goldMid text-primary px-6 py-1.5 rounded-full text-sm font-bold shadow-md whitespace-nowrap flex items-center gap-2">
-                        <i data-lucide="flame" class="w-4 h-4 fill-current"></i> 
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-goldStart to-goldMid text-primary px-6 py-2 rounded-full text-lg font-bold shadow-md whitespace-nowrap flex items-center gap-2">
+                        <i data-lucide="flame" class="w-5 h-5 fill-current"></i> 
                         <span>הכי פופולרי</span>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-white mb-2 pt-2">זוגית</h3>
-                    <p class="text-gray-200 text-base mb-6">2 קופסאות (הכי פופולרי!)</p>
+                    <h3 class="text-3xl font-bold text-white mb-2 pt-4">זוגית</h3>
+                    <p class="text-gray-200 text-xl mb-6">2 קופסאות (הכי פופולרי!)</p>
                     
                     <div class="mb-6">
                         <div class="flex items-baseline gap-2">
-                            <span class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-goldStart">₪392</span>
-                            <span class="text-lg text-white/50 line-through decoration-1">₪472</span>
+                            <span class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-goldStart">₪392</span>
+                            <span class="text-2xl text-white/50 line-through decoration-1">₪472</span>
                         </div>
-                        <div class="bg-white/10 text-white px-3 py-1 rounded-lg text-sm inline-block mt-2 font-medium border border-white/20">חסכת ₪80!</div>
-                        <div class="text-gray-200 text-sm mt-2 font-medium">+ ₪24 דמי משלוח</div>
+                        <div class="bg-white/10 text-white px-3 py-1 rounded-lg text-lg inline-block mt-2 font-medium border border-white/20">חסכת ₪80!</div>
+                        <div class="text-gray-200 text-lg mt-2 font-medium">+ ₪24 דמי משלוח</div>
                     </div>
                     
                     <div class="border-t border-white/10 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-base text-gray-100">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-goldStart shrink-0"></i>
+                        <div class="flex items-start gap-3 text-xl text-gray-100">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-goldStart shrink-0"></i>
                             <span class="font-medium">246 כמוסות</span>
                         </div>
-                        <div class="flex items-start gap-3 text-base text-gray-100">
-                            <i data-lucide="clock" class="w-5 h-5 text-goldStart shrink-0"></i>
+                        <div class="flex items-start gap-3 text-xl text-gray-100">
+                            <i data-lucide="clock" class="w-6 h-6 text-goldStart shrink-0"></i>
                             <span>מספיק ל-8 חודשים (1 ביום) או 4 חודשים (2 ביום)</span>
                         </div>
                     </div>
                     
-                    <!-- Fixed Button Container -->
                     <div class="mt-auto pt-2">
-                        <!-- כפתור -->
-                        <button class="w-full py-4 px-4 rounded-full btn-gold shadow-lg font-bold text-lg flex justify-center items-center gap-2 group leading-relaxed h-auto min-h-[50px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
+                        <button class="w-full py-5 px-4 rounded-full btn-gold shadow-lg font-bold text-xl flex justify-center items-center gap-2 group leading-relaxed h-auto min-h-[70px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
                             <span>כן! אני רוצה לחסוך 80 ₪</span>
                         </button>
                     </div>
@@ -521,43 +502,41 @@
 
                 <!-- חבילה 3 -->
                 <div class="glass-card p-6 md:p-8 flex flex-col h-full relative group hover:shadow-lg transition-all duration-300">
-                    <h3 class="text-xl font-bold text-primary mb-2">טריפל</h3>
-                    <p class="text-slate text-base mb-6 font-light">3 קופסאות - שקט לשנה!</p>
+                    <h3 class="text-2xl font-bold text-primary mb-2">טריפל</h3>
+                    <p class="text-slate text-lg mb-6 font-normal">3 קופסאות שקט לשנה!</p>
                     
                     <div class="mb-6">
                         <div class="flex items-baseline gap-2">
-                            <span class="text-4xl font-bold text-charcoal">₪468</span>
-                            <span class="text-lg text-slate/50 line-through">₪708</span>
+                            <span class="text-5xl font-bold text-charcoal">₪468</span>
+                            <span class="text-xl text-slate/50 line-through">₪708</span>
                         </div>
-                        <div class="text-primary font-bold text-sm mt-1">החיסכון הגדול ביותר (₪240)</div>
-                        <div class="text-sm text-slate mt-1 font-medium">+ ₪24 דמי משלוח</div>
+                        <div class="text-primary font-bold text-lg mt-1">החיסכון הגדול ביותר (₪240)</div>
+                        <div class="text-lg text-slate mt-1 font-medium">+ ₪24 דמי משלוח</div>
                     </div>
                     
                     <div class="border-t border-gray-100 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-base text-slate">
-                            <i data-lucide="check" class="w-5 h-5 text-primary shrink-0"></i>
+                        <div class="flex items-start gap-3 text-xl text-slate">
+                            <i data-lucide="check" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>369 כמוסות</span>
                         </div>
-                        <div class="flex items-start gap-3 text-base text-slate">
-                            <i data-lucide="clock" class="w-5 h-5 text-primary shrink-0"></i>
+                        <div class="flex items-start gap-3 text-xl text-slate">
+                            <i data-lucide="clock" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>מספיק ל-12 חודשים (1 ביום) או 6 חודשים (2 ביום)</span>
                         </div>
-                        <div class="flex items-start gap-3 text-base text-primary font-bold bg-primary/5 p-2 rounded-lg">
-                            <i data-lucide="gift" class="w-5 h-5 text-goldMid shrink-0"></i>
+                        <div class="flex items-start gap-3 text-xl text-primary font-bold bg-primary/5 p-2 rounded-lg">
+                            <i data-lucide="gift" class="w-6 h-6 text-goldMid shrink-0"></i>
                             <span>מתנה מפתיעה בכל הזמנה!</span>
                         </div>
                     </div>
                     
-                    <!-- כפתור -->
-                    <button class="w-full py-4 px-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors flex justify-center items-center gap-2 group text-base h-auto min-h-[50px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
+                    <button class="w-full py-5 px-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors flex justify-center items-center gap-2 group text-xl h-auto min-h-[70px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
                         <span>אני רוצה שנה של שקט ובריאות</span>
                     </button>
                 </div>
             </div>
 
-            <!-- אמצעי תשלום - ניקיון -->
             <div class="mt-20 flex flex-col items-center justify-center gap-4">
-                <p class="text-sm text-slate/80 font-medium"><i data-lucide="lock" class="w-4 h-4 inline-block align-text-bottom"></i> סליקה מאובטחת בתקן PCI</p>
+                <p class="text-lg text-slate/80 font-medium"><i data-lucide="lock" class="w-6 h-6 inline-block align-text-bottom"></i> סליקה מאובטחת בתקן PCI</p>
             </div>
         </div>
     </section>
@@ -574,7 +553,7 @@
                             האם יש תופעות לוואי?
                             <span class="transform group-open:rotate-180 transition-transform text-goldMid"><i data-lucide="chevron-down" class="w-6 h-6"></i></span>
                         </summary>
-                        <div class="text-slate font-light mt-4 pt-4 border-t border-gray-100 leading-relaxed text-lg">
+                        <div class="text-slate font-normal mt-4 pt-4 border-t border-gray-100 leading-relaxed text-xl">
                             המוצר טבעי ובטוח. ייתכן שינוי קל בעיכול בימים הראשונים – זה סימן שהניקוי עובד.
                         </div>
                     </details>
@@ -586,7 +565,7 @@
                             האם זה מתאים למעשנות או נוטלות תרופות?
                             <span class="transform group-open:rotate-180 transition-transform text-goldMid"><i data-lucide="chevron-down" class="w-6 h-6"></i></span>
                         </summary>
-                        <div class="text-slate font-light mt-4 pt-4 border-t border-gray-100 leading-relaxed text-lg">
+                        <div class="text-slate font-normal mt-4 pt-4 border-t border-gray-100 leading-relaxed text-xl">
                             בהחלט! במקרים אלו אנו ממליצים על מינון של 2 כמוסות ליום (במרווח של שעתיים מתרופות).
                         </div>
                     </details>
@@ -598,7 +577,7 @@
                             למה 123 כמוסות?
                             <span class="transform group-open:rotate-180 transition-transform text-goldMid"><i data-lucide="chevron-down" class="w-6 h-6"></i></span>
                         </summary>
-                        <div class="text-slate font-light mt-4 pt-4 border-t border-gray-100 leading-relaxed text-lg">
+                        <div class="text-slate font-normal mt-4 pt-4 border-t border-gray-100 leading-relaxed text-xl">
                             כדי להעניק לך יותר בכל קופסה (כ-23% יותר מהסטנדרט) ולאפשר לך טיפול רציף ומשתלם.
                         </div>
                     </details>
@@ -610,7 +589,7 @@
                             האם המוצר כשר?
                             <span class="transform group-open:rotate-180 transition-transform text-goldMid"><i data-lucide="chevron-down" class="w-6 h-6"></i></span>
                         </summary>
-                        <div class="text-slate font-light mt-4 pt-4 border-t border-gray-100 leading-relaxed text-lg">
+                        <div class="text-slate font-normal mt-4 pt-4 border-t border-gray-100 leading-relaxed text-xl">
                             כן, בעל אישור כשרות בד״ץ.
                         </div>
                     </details>
@@ -627,25 +606,25 @@
         
         <div class="max-w-2xl mx-auto relative z-10">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">הגוף שלך מחכה לשינוי. את מוכנה?</h2>
-            <p class="text-2xl text-gray-200 mb-12 font-light leading-relaxed">אל תמשיכי להרגיש עייפה ונפוחה.<br class="hidden md:block">הזמיני עכשיו את מולטי דיטוקס 123 והתחילי להרגיש את הקלילות.</p>
+            <p class="text-2xl text-gray-200 mb-12 font-normal leading-relaxed">אל תמשיכי להרגיש עייפה ונפוחה.<br class="hidden md:block">הזמיני עכשיו את מולטי דיטוקס 123 והתחילי להרגיש את הקלילות.</p>
             
             <!-- Bottom Form -->
             <div class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl max-w-lg mx-auto">
                 <h3 class="text-3xl font-bold text-primary mb-8">מלאי פרטים למעבר לרכישה</h3>
                 <form id="bottomForm" class="space-y-6 text-right" novalidate>
                     <div>
-                        <label class="block text-lg font-medium text-slate mb-2">שם מלא</label>
+                        <label class="block text-xl font-medium text-slate mb-2">שם מלא</label>
                         <input type="text" name="fullName" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-lg font-medium text-slate mb-2">טלפון נייד</label>
+                        <label class="block text-xl font-medium text-slate mb-2">טלפון נייד</label>
                         <input type="tel" name="phone" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
                     </div>
                     
-                    <button type="submit" class="btn-gold w-full py-5 px-8 text-xl font-bold shadow-gold mt-6 flex justify-center items-center gap-2 group leading-relaxed h-auto min-h-[60px]">
+                    <button type="submit" class="btn-gold w-full py-5 px-8 text-2xl font-bold shadow-gold mt-6 flex justify-center items-center gap-2 group leading-relaxed h-auto min-h-[70px]">
                         <span class="relative z-10 text-center">לפרטים נוספים ומעבר להזמנה</span>
                     </button>
-                    <p class="text-sm text-center text-slate/80 mt-4">
+                    <p class="text-base text-center text-slate/80 mt-4">
                         🔒 פרטייך חסויים ושמורים אצלנו
                     </p>
                 </form>

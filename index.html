@@ -45,7 +45,7 @@
                         earthPinkLight: '#FDF8F5', // רקע ורדרד
                         pearlCream: '#F9FAFB',   // רקע כללי
                         charcoal: '#333333',     // טקסט ראשי
-                        slate: '#2D3748',        // טקסט משני - הוקהה לקריאות מקסימלית
+                        slate: '#4A5568',        // טקסט משני - הוקהה לקריאות טובה יותר
                     },
                     fontFamily: {
                         rubik: ['Rubik', 'sans-serif'],
@@ -59,16 +59,16 @@
                         'gold-gradient': 'linear-gradient(180deg, #FCE38A 0%, #D4AF37 50%, #997B09 100%)',
                     },
                     fontSize: {
-                        'xs': ['1rem', { lineHeight: '1.5rem' }],        // מינימום 16px
-                        'sm': ['1.125rem', { lineHeight: '1.75rem' }],   // 18px
-                        'base': ['1.25rem', { lineHeight: '1.85rem' }],  // 20px
-                        'lg': ['1.35rem', { lineHeight: '2rem' }],       // ~22px
-                        'xl': ['1.5rem', { lineHeight: '2.25rem' }],     // 24px
-                        '2xl': ['1.875rem', { lineHeight: '2.5rem' }],   // 30px
-                        '3xl': ['2.25rem', { lineHeight: '2.75rem' }],   // 36px
-                        '4xl': ['3rem', { lineHeight: '1.1' }],
-                        '5xl': ['3.75rem', { lineHeight: '1.1' }],
-                        '6xl': ['4.5rem', { lineHeight: '1.1' }],
+                        'xs': ['0.875rem', { lineHeight: '1.25rem' }], 
+                        'sm': ['1rem', { lineHeight: '1.5rem' }],      
+                        'base': ['1.125rem', { lineHeight: '1.75rem' }], 
+                        'lg': ['1.25rem', { lineHeight: '1.85rem' }],    
+                        'xl': ['1.5rem', { lineHeight: '2.1rem' }],        
+                        '2xl': ['1.875rem', { lineHeight: '2.35rem' }],  
+                        '3xl': ['2.25rem', { lineHeight: '2.6rem' }],    
+                        '4xl': ['3rem', { lineHeight: '1.1' }],             
+                        '5xl': ['3.75rem', { lineHeight: '1.1' }],          
+                        '6xl': ['4.5rem', { lineHeight: '1.1' }],           
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
@@ -89,7 +89,7 @@
             font-family: 'Rubik', sans-serif; 
             background-color: #F9FAFB;
             color: #333333;
-            font-size: 20px; /* ברירת מחדל גדולה מאוד */
+            font-size: 18px; 
             overflow-x: hidden;
         }
         
@@ -180,7 +180,7 @@
 
         .form-input {
             transition: all 0.3s ease;
-            font-size: 1.25rem; /* טקסט גדול בשדות */
+            font-size: 1.125rem; 
         }
         .form-input:focus {
             border-color: #D4AF37;
@@ -191,7 +191,7 @@
 <body class="antialiased selection:bg-goldMid selection:text-white">
 
     <!-- Top Bar -->
-    <div class="bg-primary text-white text-center py-3 px-4 text-lg font-medium tracking-wide flex justify-center items-center gap-2">
+    <div class="bg-primary text-white text-center py-3 px-4 text-base font-medium tracking-wide flex justify-center items-center gap-2">
         <span>100% טבעי | משלוח מהיר עד 5 ימי עסקים</span>
     </div>
 
@@ -201,8 +201,8 @@
 
         <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
             
-            <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-primary/10 text-primary font-semibold text-lg mb-6 shadow-sm" data-aos="fade-down">
-                <i data-lucide="leaf" class="w-6 h-6 text-goldMid flex-shrink-0"></i>
+            <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-primary/10 text-primary font-semibold text-base mb-6 shadow-sm" data-aos="fade-down">
+                <i data-lucide="leaf" class="w-5 h-5 text-goldMid flex-shrink-0"></i>
                 הפתרון הטבעי שחיכית לו
             </div>
 
@@ -212,7 +212,7 @@
             </h1>
 
             <p class="text-xl md:text-2xl text-slate mb-10 max-w-2xl text-center leading-relaxed font-normal px-2" data-aos="fade-up" data-aos-delay="100">
-                הכירי את <strong>מולטי דיטוקס 123</strong> הדרך הטבעית והבטוחה לנקות את הכבד, להשיב את האנרגיה ולהרגיש קלילה שוב.
+                הכירי את <strong>מולטי דיטוקס 123</strong> – הדרך הטבעית והבטוחה לנקות את הכבד, להשיב את האנרגיה ולהרגיש קלילה שוב.
             </p>
 
             <div class="flex flex-col items-center w-full gap-10">
@@ -277,14 +277,13 @@
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">למה את מרגישה ככה?</h2>
-                <p class="text-xl md:text-2xl text-slate max-w-3xl mx-auto font-normal leading-relaxed px-2">
+                <p class="text-xl text-slate max-w-3xl mx-auto font-normal leading-relaxed px-2">
                     הגוף שלנו חשוף מדי יום למאות רעלים: זיהום אוויר, מזון מעובד, תרופות, עישון ולחץ יומיומי.
                     <br class="hidden md:block"><strong class="text-earthPink font-bold">הכבד שלך? הוא עובד שעות נוספות.</strong> כשהוא עמוס, את מרגישה:
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
-                <!-- בעיה 1 -->
                 <div class="glass-card p-8 text-center group hover:border-earthPink/30 transition-colors">
                     <div class="w-20 h-20 mx-auto bg-earthPinkLight rounded-2xl flex items-center justify-center mb-6 text-earthPink">
                         <i data-lucide="battery-warning" class="w-10 h-10"></i>
@@ -292,7 +291,6 @@
                     <h3 class="text-2xl font-bold text-primary mb-3">עייפות כרונית</h3>
                     <p class="text-slate text-xl leading-relaxed">חוסר אנרגיה ותחושת כבדות שלא עוברת גם אחרי מנוחה.</p>
                 </div>
-                <!-- בעיה 2 -->
                 <div class="glass-card p-8 text-center group hover:border-earthPink/30 transition-colors">
                     <div class="w-20 h-20 mx-auto bg-earthPinkLight rounded-2xl flex items-center justify-center mb-6 text-earthPink">
                         <i data-lucide="wind" class="w-10 h-10"></i>
@@ -300,7 +298,6 @@
                     <h3 class="text-2xl font-bold text-primary mb-3">נפיחות בבטן</h3>
                     <p class="text-slate text-xl leading-relaxed">תחושת "בלון" וכבדות לא נעימה, בעיקר אחרי האוכל.</p>
                 </div>
-                <!-- בעיה 3 -->
                 <div class="glass-card p-8 text-center group hover:border-earthPink/30 transition-colors">
                     <div class="w-20 h-20 mx-auto bg-earthPinkLight rounded-2xl flex items-center justify-center mb-6 text-earthPink">
                         <i data-lucide="scale" class="w-10 h-10"></i>
@@ -308,7 +305,6 @@
                     <h3 class="text-2xl font-bold text-primary mb-3">קושי במשקל</h3>
                     <p class="text-slate text-xl leading-relaxed">המשקל מרגיש "תקוע" גם כשאת מנסה לשמור על תזונה.</p>
                 </div>
-                <!-- בעיה 4 -->
                 <div class="glass-card p-8 text-center group hover:border-earthPink/30 transition-colors">
                     <div class="w-20 h-20 mx-auto bg-earthPinkLight rounded-2xl flex items-center justify-center mb-6 text-earthPink">
                         <i data-lucide="frown" class="w-10 h-10"></i>
@@ -434,7 +430,6 @@
                 </div>
             </div>
 
-            <!-- Pricing Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-end">
                 
                 <!-- חבילה 1 -->
@@ -448,11 +443,11 @@
                     </div>
                     
                     <div class="border-t border-gray-100 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-xl text-slate">
+                        <div class="flex items-start gap-3 text-lg text-slate">
                             <i data-lucide="check" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>123 כמוסות</span>
                         </div>
-                        <div class="flex items-start gap-3 text-xl text-slate">
+                        <div class="flex items-start gap-3 text-lg text-slate">
                             <i data-lucide="clock" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>מספיק ל-4 חודשים (1 ביום)</span>
                         </div>
@@ -483,11 +478,11 @@
                     </div>
                     
                     <div class="border-t border-white/10 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-xl text-gray-100">
+                        <div class="flex items-start gap-3 text-lg text-gray-100">
                             <i data-lucide="check-circle-2" class="w-6 h-6 text-goldStart shrink-0"></i>
                             <span class="font-medium">246 כמוסות</span>
                         </div>
-                        <div class="flex items-start gap-3 text-xl text-gray-100">
+                        <div class="flex items-start gap-3 text-lg text-gray-100">
                             <i data-lucide="clock" class="w-6 h-6 text-goldStart shrink-0"></i>
                             <span>מספיק ל-8 חודשים (1 ביום) או 4 חודשים (2 ביום)</span>
                         </div>
@@ -503,7 +498,7 @@
                 <!-- חבילה 3 -->
                 <div class="glass-card p-6 md:p-8 flex flex-col h-full relative group hover:shadow-lg transition-all duration-300">
                     <h3 class="text-2xl font-bold text-primary mb-2">טריפל</h3>
-                    <p class="text-slate text-lg mb-6 font-normal">3 קופסאות שקט לשנה!</p>
+                    <p class="text-slate text-lg mb-6 font-normal">3 קופסאות - שקט לשנה!</p>
                     
                     <div class="mb-6">
                         <div class="flex items-baseline gap-2">
@@ -515,15 +510,15 @@
                     </div>
                     
                     <div class="border-t border-gray-100 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-xl text-slate">
+                        <div class="flex items-start gap-3 text-lg text-slate">
                             <i data-lucide="check" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>369 כמוסות</span>
                         </div>
-                        <div class="flex items-start gap-3 text-xl text-slate">
+                        <div class="flex items-start gap-3 text-lg text-slate">
                             <i data-lucide="clock" class="w-6 h-6 text-primary shrink-0"></i>
                             <span>מספיק ל-12 חודשים (1 ביום) או 6 חודשים (2 ביום)</span>
                         </div>
-                        <div class="flex items-start gap-3 text-xl text-primary font-bold bg-primary/5 p-2 rounded-lg">
+                        <div class="flex items-start gap-3 text-lg text-primary font-bold bg-primary/5 p-2 rounded-lg">
                             <i data-lucide="gift" class="w-6 h-6 text-goldMid shrink-0"></i>
                             <span>מתנה מפתיעה בכל הזמנה!</span>
                         </div>
@@ -735,6 +730,5 @@
         document.getElementById('bottomForm').addEventListener('submit', handleFormSubmit);
 
     </script>
-<script src="https://rivkaol.github.io/legal-footer.js"></script>
 </body>
 </html>

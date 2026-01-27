@@ -256,6 +256,11 @@
                                 <label class="block text-xl font-medium text-slate mb-2">טלפון נייד</label>
                                 <input type="tel" name="phone" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
                             </div>
+                            <!-- הוספת שדה אימייל -->
+                            <div>
+                                <label class="block text-xl font-medium text-slate mb-2">אימייל</label>
+                                <input type="email" name="email" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
+                            </div>
                             
                             <button type="submit" class="btn-gold w-full py-5 px-4 text-xl font-bold shadow-gold mt-4 group whitespace-normal h-auto min-h-[70px]">
                                 <span class="relative z-10 text-center leading-tight">לפרטים נוספים ומעבר להזמנה</span>
@@ -334,6 +339,12 @@
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">מולטי דיטוקס 123</h2>
+                
+                <!-- תמונת מוצר -->
+                <div class="max-w-md mx-auto mb-8">
+                    <img src="multy.jpg" alt="בקבוק מולטי דיטוקס 123" class="w-full h-auto drop-shadow-2xl hover:scale-105 transition duration-500 max-h-80 object-contain mx-auto">
+                </div>
+
                 <h3 class="text-2xl md:text-3xl font-normal text-white/90 mb-6">הניקוי שהכבד שלך חיכה לו</h3>
                 <p class="text-gray-200 max-w-3xl mx-auto text-xl leading-relaxed font-normal px-2">
                     נוסחה ייחודית המשלבת 7 צמחי מרפא עוצמתיים וטכנולוגיה מתקדמת.
@@ -419,125 +430,8 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 md:py-24 px-4 md:px-8 bg-white border-t border-gray-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">בחרי את האפשרות המתאימה לך</h2>
-                <div class="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-8 text-xl text-slate font-medium">
-                    <span class="flex items-center justify-center gap-2"><i data-lucide="truck" class="w-6 h-6 text-goldMid"></i> משלוח מהיר (5 ימי עסקים)</span>
-                    <span class="flex items-center justify-center gap-2"><i data-lucide="credit-card" class="w-6 h-6 text-goldMid"></i> עד 8 תשלומים ללא ריבית</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-end">
-                
-                <!-- חבילה 1 -->
-                <div class="glass-card p-6 md:p-8 flex flex-col h-full relative group hover:shadow-lg transition-all duration-300">
-                    <h3 class="text-2xl font-bold text-primary mb-2">סטנדרטית</h3>
-                    <p class="text-slate text-lg mb-6 font-normal">קופסה אחת</p>
-                    
-                    <div class="mb-6">
-                        <span class="text-5xl font-bold text-charcoal">₪236</span>
-                        <div class="text-lg text-slate mt-1 font-medium">+ ₪24 דמי משלוח</div>
-                    </div>
-                    
-                    <div class="border-t border-gray-100 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-lg text-slate">
-                            <i data-lucide="check" class="w-6 h-6 text-primary shrink-0"></i>
-                            <span>123 כמוסות</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-lg text-slate">
-                            <i data-lucide="clock" class="w-6 h-6 text-primary shrink-0"></i>
-                            <span>מספיק ל-4 חודשים (1 ביום)</span>
-                        </div>
-                    </div>
-                    
-                    <button class="w-full py-5 px-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors flex justify-center items-center gap-2 group text-xl h-auto min-h-[70px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
-                        <span>אני רוצה לנסות את הדיטוקס</span>
-                    </button>
-                </div>
-
-                <!-- חבילה 2 - מודגשת -->
-                <div class="bg-primary text-white rounded-3xl p-6 md:p-8 relative transform md:scale-105 shadow-gold flex flex-col h-full z-10 border border-primaryHover group transition-transform duration-300">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-goldStart to-goldMid text-primary px-6 py-2 rounded-full text-lg font-bold shadow-md whitespace-nowrap flex items-center gap-2">
-                        <i data-lucide="flame" class="w-5 h-5 fill-current"></i> 
-                        <span>הכי פופולרי</span>
-                    </div>
-                    
-                    <h3 class="text-3xl font-bold text-white mb-2 pt-4">זוגית</h3>
-                    <p class="text-gray-200 text-xl mb-6">2 קופסאות (הכי פופולרי!)</p>
-                    
-                    <div class="mb-6">
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-goldStart">₪392</span>
-                            <span class="text-2xl text-white/50 line-through decoration-1">₪472</span>
-                        </div>
-                        <div class="bg-white/10 text-white px-3 py-1 rounded-lg text-lg inline-block mt-2 font-medium border border-white/20">חסכת ₪80!</div>
-                        <div class="text-gray-200 text-lg mt-2 font-medium">+ ₪24 דמי משלוח</div>
-                    </div>
-                    
-                    <div class="border-t border-white/10 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-lg text-gray-100">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-goldStart shrink-0"></i>
-                            <span class="font-medium">246 כמוסות</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-lg text-gray-100">
-                            <i data-lucide="clock" class="w-6 h-6 text-goldStart shrink-0"></i>
-                            <span>מספיק ל-8 חודשים (1 ביום) או 4 חודשים (2 ביום)</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-auto pt-2">
-                        <button class="w-full py-5 px-4 rounded-full btn-gold shadow-lg font-bold text-xl flex justify-center items-center gap-2 group leading-relaxed h-auto min-h-[70px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
-                            <span>כן! אני רוצה לחסוך 80 ₪</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- חבילה 3 -->
-                <div class="glass-card p-6 md:p-8 flex flex-col h-full relative group hover:shadow-lg transition-all duration-300">
-                    <h3 class="text-2xl font-bold text-primary mb-2">טריפל</h3>
-                    <p class="text-slate text-lg mb-6 font-normal">3 קופסאות - שקט לשנה!</p>
-                    
-                    <div class="mb-6">
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-5xl font-bold text-charcoal">₪468</span>
-                            <span class="text-xl text-slate/50 line-through">₪708</span>
-                        </div>
-                        <div class="text-primary font-bold text-lg mt-1">החיסכון הגדול ביותר (₪240)</div>
-                        <div class="text-lg text-slate mt-1 font-medium">+ ₪24 דמי משלוח</div>
-                    </div>
-                    
-                    <div class="border-t border-gray-100 pt-6 mb-8 space-y-4 flex-grow">
-                        <div class="flex items-start gap-3 text-lg text-slate">
-                            <i data-lucide="check" class="w-6 h-6 text-primary shrink-0"></i>
-                            <span>369 כמוסות</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-lg text-slate">
-                            <i data-lucide="clock" class="w-6 h-6 text-primary shrink-0"></i>
-                            <span>מספיק ל-12 חודשים (1 ביום) או 6 חודשים (2 ביום)</span>
-                        </div>
-                        <div class="flex items-start gap-3 text-lg text-primary font-bold bg-primary/5 p-2 rounded-lg">
-                            <i data-lucide="gift" class="w-6 h-6 text-goldMid shrink-0"></i>
-                            <span>מתנה מפתיעה בכל הזמנה!</span>
-                        </div>
-                    </div>
-                    
-                    <button class="w-full py-5 px-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors flex justify-center items-center gap-2 group text-xl h-auto min-h-[70px]" onclick="document.getElementById('finalForm').scrollIntoView({behavior: 'smooth'})">
-                        <span>אני רוצה שנה של שקט ובריאות</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="mt-20 flex flex-col items-center justify-center gap-4">
-                <p class="text-lg text-slate/80 font-medium"><i data-lucide="lock" class="w-6 h-6 inline-block align-text-bottom"></i> סליקה מאובטחת בתקן PCI</p>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
-    <section class="py-16 md:py-24 px-4 md:px-8 bg-pearlCream border-t border-gray-100">
+    <section class="py-16 md:py-24 px-4 md:px-8 bg-white border-t border-gray-100">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-primary mb-12">שאלות נפוצות</h2>
             
@@ -615,6 +509,11 @@
                         <label class="block text-xl font-medium text-slate mb-2">טלפון נייד</label>
                         <input type="tel" name="phone" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
                     </div>
+                    <!-- הוספת שדה אימייל בטופס תחתון -->
+                    <div>
+                        <label class="block text-xl font-medium text-slate mb-2">אימייל</label>
+                        <input type="email" name="email" required class="form-input w-full px-5 py-4 rounded-xl bg-gray-50 border border-gray-200 text-charcoal focus:bg-white focus:outline-none" dir="ltr" style="text-align: right;">
+                    </div>
                     
                     <button type="submit" class="btn-gold w-full py-5 px-8 text-2xl font-bold shadow-gold mt-6 flex justify-center items-center gap-2 group leading-relaxed h-auto min-h-[70px]">
                         <span class="relative z-10 text-center">לפרטים נוספים ומעבר להזמנה</span>
@@ -647,11 +546,12 @@
         });
 
         // Webhook Submission Logic
-        async function sendToWebhook(name, phone, pkg = '') {
+        async function sendToWebhook(name, phone, email, pkg = '') {
             const webhookUrl = 'https://hook.eu2.make.com/79nt2oe1gc1d6vcxqjwdllw85ljvgb1b';
             const data = {
                 "שם_מלא": name,
                 "טלפון": phone,
+                "אימייל": email,
                 "חבילה": pkg
             };
             
@@ -680,13 +580,16 @@
             // Getting Inputs for Validation
             const nameInput = form.querySelector('input[name="fullName"]');
             const phoneInput = form.querySelector('input[name="phone"]');
+            const emailInput = form.querySelector('input[name="email"]');
             
             // Reset validity messages
             nameInput.setCustomValidity('');
             phoneInput.setCustomValidity('');
+            emailInput.setCustomValidity('');
 
             const name = nameInput.value.trim();
             const phone = phoneInput.value.trim();
+            const email = emailInput.value.trim();
 
             // Name Validation: At least 2 characters
             if (name.length < 2) {
@@ -703,6 +606,14 @@
                 return;
             }
 
+            // Email Validation: Simple regex for email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailInput.setCustomValidity('נא להזין כתובת אימייל תקינה');
+                emailInput.reportValidity();
+                return;
+            }
+
             const originalBtnText = submitBtn.innerHTML;
             
             // Show loading state
@@ -712,7 +623,7 @@
             // Default package for forms without selector
             const pkg = 'טופס כללי (אין בחירת חבילה)';
 
-            sendToWebhook(name, phone, pkg).then(() => {
+            sendToWebhook(name, phone, email, pkg).then(() => {
                 // Track Lead event
                 if (typeof fbq === 'function') {
                     fbq('track', 'Lead');

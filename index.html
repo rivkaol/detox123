@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מולטי דיטוקס 123 - הדרך הטבעית להתחדשות</title>
     
+    <!-- פקודה לטעינה מוקדמת של תמונת הנושא לשיפור מהירות -->
+    <link rel="preload" as="image" href="page.jpg" fetchpriority="high">
+
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -217,12 +220,16 @@
 
             <div class="flex flex-col items-center w-full gap-10">
                 
+                <!-- תמונה ראשית עם תעדוף טעינה -->
                 <div class="relative group w-full max-w-3xl px-2" data-aos="zoom-in" data-aos-delay="200">
                     <div class="absolute -inset-1 bg-gradient-to-r from-goldStart to-primary opacity-20 blur-xl rounded-[40px] transition duration-1000 group-hover:opacity-40"></div>
                     <div class="relative p-2 bg-white/60 backdrop-blur-sm rounded-[32px] border border-white">
                         <div class="aspect-[16/9] rounded-[24px] overflow-hidden relative shadow-2xl">
-                            <img src="page.png" 
+                            <!-- הוספתי fetchpriority ו-loading eager כדי לטעון מהר -->
+                            <img src="page.jpg" 
                                  alt="אישה מחייכת ומרגישה קלילה" 
+                                 fetchpriority="high"
+                                 loading="eager"
                                  class="w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
                             
                             <div class="absolute bottom-6 right-6 glass-card px-6 py-4 flex items-center gap-4 animate-float hidden md:flex">
